@@ -1,0 +1,401 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 14;
+    /* This text is really long and the height of its container is only 100 pixels.
+     Therefore, a scrollbar is added to help the reader to scroll the content */
+}
+
+* {
+    box-sizing: border-box;
+    /* container height=100vh + 2px border size
+    use box sizing which include border size internally to conatiner height */
+}
+
+.container {
+    /* vh % of window height 100% means full window */
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.title {
+    height: 5vh;
+    background-color: #107c41;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    height: 5vh;
+    display: flex;
+    background-color: #107c41;
+}
+
+.menu-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18;
+    color: white;
+}
+
+.menu-item.selected {
+    background-color: white;
+    color: #107c41;
+}
+
+.menu-item:hover {
+    background-color: #054b24;
+    cursor: pointer;
+}
+
+.menu-item.selected:hover {
+    background-color: white;
+    cursor: default;
+}
+
+.icon {
+    height: 6vh;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.selector {
+    height: 50%;
+    font-size: 18px;
+}
+
+.font-family-selector {
+    width: 300px;
+    font-family: 'Noto Sans';
+}
+
+.selector option {
+    font-size: 18px;
+}
+
+.formula {
+    height: 5vh;
+}
+
+.data-contain {
+    height: 75vh;
+    /* border: 2px solid pink; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select-all {
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgrey;
+}
+
+.column {
+    width: 98vw;
+    height: 30px;
+    border: 1px solid lightgrey;
+    display: flex;
+    overflow: hidden;
+}
+
+.column-name {
+    min-width: 100px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgrey;
+    font-weight: bold;
+}
+
+.row {
+    width: 30px;
+    height: 71.2vh;
+    border: 1px solid lightgrey;
+    overflow: hidden;
+}
+
+.row-name {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid lightgrey;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+.input-area {
+    width: 98vw;
+    height: 71.2vh;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+.cell-row {
+    display: flex;
+}
+
+.input-cell {
+    min-width: 100px;
+    min-height: 25px;
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    outline-color: #107c41;
+    font-size: 14px;
+    font-family: 'Noto Sans';
+}
+
+.input-cell.selected {
+    border: 2px solid #107c41;
+}
+
+.lower-bar {
+    height: 4vh;
+    /* border: 2px solid paleturquoise; */
+    display: flex;
+}
+
+.icon-left-scroll,
+.icon-right-scroll {
+    font-size: 30px;
+}
+
+.scroll {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon-left-scroll:hover,
+.icon-right-scroll:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.icon-add {
+    color: #107c41;
+    width: 40px;
+}
+
+.icon-add:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.sheet-tab-container {
+    border: 1px solid lightgrey;
+    width: 100%;
+    display: flex;
+}
+
+.sheet-tab {
+    border-right: 1px solid lightgrey;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    font-weight: 600;
+}
+
+.sheet-tab.selected {
+    border-bottom: 4px solid #107c41;
+}
+
+.sheet-tab:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+.sheet-tab.selected:hover {
+    cursor: default;
+    background-color: #fff;
+}
+
+.formula {
+    display: flex;
+    align-items: center;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background-color: rgb(241, 241, 241);
+}
+
+.formula-edit {
+    height: 70%;
+    border: 1px solid lightgrey;
+    width: 120px;
+    margin-right: 2px;
+    background-color: white;
+    padding-left: 0.7rem;
+    padding-right: 0.7 rem;
+    display: flex;
+    align-items: center;
+}
+
+.selected-cell {
+    width: 120px;
+}
+
+.formula-sign {
+    width: 40px;
+    border: 1px solid lightgrey;
+    height: 70%;
+    margin-right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.formula-input {
+    width: 90%;
+    outline-color: #107c41;
+}
+
+.menu-icon.selected {
+    background-color: lightgrey;
+}
+
+
+/* multiple cell selected then common border remove */
+
+.input-cell.top-cell-selected {
+    border-top: none;
+}
+
+.input-cell.bottom-cell-selected {
+    border-bottom: 1px solid lightgray;
+}
+
+.input-cell.right-cell-selected {
+    border-right: 1px solid lightgray;
+}
+
+.input-cell.left-cell-selected {
+    border-left: none;
+}
+
+.icon-color-fill,
+.icon-color-text {
+    position: relative;
+}
+
+.color-picker {
+    position: absolute;
+    width: 26px;
+    height: 12px;
+    border: none;
+    padding: 0px;
+    top: 32px;
+}
+
+.color-picker:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+.sheet-option-modal {
+    position: absolute;
+    bottom: 4vh;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    box-shadow: 0 0 5px 3px lightgrey;
+}
+
+.sheet-rename,
+.sheet-delete {
+    height: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sheet-rename:hover,
+.sheet-delete:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.sheet-rename-modal {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 250px;
+    left: 500px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 0 5px 3px lightgrey;
+}
+
+.action-button {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+.modal-title {
+    font-size: 20px;
+}
+
+.new-sheet-name {
+    height: 26px;
+    font-size: 18px;
+    outline-color: #107c41;
+}
+
+.submit-button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #107c41;
+    padding: 8px;
+}
+
+.submit-delete-button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #107c41;
+    padding: 8px;
+}
+
+.cancel-button {
+    cursor: pointer;
+    color: #fff;
+    padding: 8px;
+    background-color: lightgrey;
+}
+
+.cancel-delete-button {
+    cursor: pointer;
+    color: #fff;
+    padding: 8px;
+    background-color: lightgrey;
+}

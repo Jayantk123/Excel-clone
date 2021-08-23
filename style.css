@@ -119,6 +119,7 @@ body {
     border: 1px solid lightgrey;
     display: flex;
     overflow: hidden;
+     background-color: #0aa14e;
 }
 
 .column-name {
@@ -136,6 +137,7 @@ body {
     height: 71.2vh;
     border: 1px solid lightgrey;
     overflow: hidden;
+     background-color: #0aa14e;
 }
 
 .row-name {
